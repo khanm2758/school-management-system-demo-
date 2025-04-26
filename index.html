@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>School Management System</title>
+    <link rel="stylesheet" href="./style.css" />
+    <script src="./app.js" defer></script>
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <img
+        src="https://img.freepik.com/premium-vector/education-logo-design-template-school-organization_731136-2.jpg"
+        alt="Logo"
+      />
+      <h1>School Management System</h1>
+      <nav>
+        <a
+          href="#"
+          onclick="showSection('local-storage')"
+          id="local-storage-link"
+          >Local Storage</a
+        >
+        <a
+          href="#"
+          onclick="showSection('session-storage')"
+          id="session-storage-link"
+          >Session Storage</a
+        >
+        <a
+          href="#"
+          onclick="showSection('cookie-storage')"
+          id="cookie-storage-link"
+          >Cookie Storage</a
+        >
+        <a
+          href="#"
+          onclick="showSection('state-management')"
+          id="state-management-link"
+          >State Management</a
+        >
+      </nav>
+    </header>
+
+    <!-- Sidebar -->
+    <aside>
+      <img
+        id="school-logo"
+        src="https://img.freepik.com/premium-vector/education-logo-design-template-school-organization_731136-2.jpg"
+        alt="School Logo"
+      />
+      <h2 id="school-name">Our School</h2>
+      <p id="school-slogan">We have the best education system</p>
+      <ul>
+        <li>
+          <a
+            href="#"
+            onclick="showSection('dashboard')"
+            id="dashboard-link"
+            class="active"
+            >Dashboard</a
+          >
+        </li>
+        <li>
+          <a href="#" onclick="showSection('students')" id="students-link"
+            >Students</a
+          >
+        </li>
+        <li>
+          <a href="#" onclick="showSection('notices')" id="notices-link"
+            >Notices</a
+          >
+        </li>
+        <li>
+          <a href="#" onclick="showSection('settings')" id="settings-link"
+            >Settings</a
+          >
+        </li>
+      </ul>
+      <div class="version">UI Version 1.0.2</div>
+    </aside>
+
+    <!-- Main Content -->
+    <main>
+      <!-- Dashboard Section -->
+      <section id="dashboard" class="section active">
+        <h2>Dashboard</h2>
+        <div class="total-students">
+          <h3>Total Students</h3>
+          <p id="total-students-count">0</p>
+        </div>
+        <div class="latest-notices">
+          <h3>Latest Notices</h3>
+          <div id="dashboard-notices"></div>
+        </div>
+      </section>
+
+      <!-- Students Section -->
+      <section id="students" class="section">
+        <h2>Student Management</h2>
+        <button class="admit-btn" onclick="openAdmitModal()">
+          Admit New Student
+        </button>
+        <table>
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Name</th>
+              <th>Class</th>
+              <th>Roll</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody id="students-table"></tbody>
+        </table>
+      </section>
+
+      <!-- Notices Section -->
+      <section id="notices" class="section">
+        <h2>Create New Notice</h2>
+        <div>
+          <label>Notice Title:</label>
+          <input type="text" id="notice-title" />
+          <label>Notice Content:</label>
+          <textarea id="notice-content"></textarea>
+          <button class="primary" onclick="publishNotice()">
+            Publish Notice
+          </button>
+        </div>
+        <h2>All Notices</h2>
+        <div id="all-notices"></div>
+      </section>
+
+      <!-- Settings Section -->
+      <section id="settings" class="section">
+        <h2>School Settings</h2>
+        <div class="settings__form">
+          <label>School Name:</label>
+          <input type="text" id="setting-school-name" value="Our School" />
+          <label>School Slogan:</label>
+          <input
+            type="text"
+            id="setting-school-slogan"
+            value="We have the best education system"
+          />
+          <label>Logo URL:</label>
+          <input
+            type="text"
+            id="setting-logo-url"
+            value="https://img.freepik.com/premium-vector/education-logo-design-template-school-organization_731136-2.jpg"
+          />
+          <button class="primary" onclick="saveSettings()">
+            Save Settings
+          </button>
+        </div>
+      </section>
+
+      <!-- Local Storage Section -->
+      <section id="local-storage" class="section">
+        <h2>Local Storage</h2>
+        <div class="total-students">
+          <h3>Total Students</h3>
+          <p id="local-total-students-count">0</p>
+        </div>
+        <div class="latest-notices">
+          <h3>Latest Notices</h3>
+          <div id="local-dashboard-notices"></div>
+        </div>
+      </section>
+
+      <!-- Session Storage Section -->
+      <section id="session-storage" class="section">
+        <h2>Session Storage</h2>
+        <div class="total-students">
+          <h3>Total Students</h3>
+          <p id="session-total-students-count">0</p>
+        </div>
+        <div class="latest-notices">
+          <h3>Latest Notices</h3>
+          <div id="session-dashboard-notices"></div>
+        </div>
+      </section>
+
+      <!-- Cookie Storage Section -->
+      <section id="cookie-storage" class="section">
+        <h2>Cookie Storage</h2>
+        <div class="total-students">
+          <h3>Total Students</h3>
+          <p id="cookie-total-students-count">0</p>
+        </div>
+        <div class="latest-notices">
+          <h3>Latest Notices</h3>
+          <div id="cookie-dashboard-notices"></div>
+        </div>
+      </section>
+
+      <!-- State Management Section -->
+      <section id="state-management" class="section">
+        <h2>State Management</h2>
+        <div class="total-students">
+          <h3>Total Students</h3>
+          <p id="state-total-students-count">0</p>
+        </div>
+        <div class="latest-notices">
+          <h3>Latest Notices</h3>
+          <div id="state-dashboard-notices"></div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Modal for Admit/Edit Student -->
+    <div id="student-modal" class="modal">
+      <div class="modal-content">
+        <h3 id="modal-title">Admit New Student</h3>
+        <label>Student Name</label>
+        <input type="text" id="modal-student-name" />
+        <label>Class</label>
+        <input type="text" id="modal-student-class" />
+        <label>Roll Number</label>
+        <input type="text" id="modal-student-roll" />
+        <div class="actions">
+          <button id="modal-save-btn" class="primary" onclick="saveStudent()">
+            Admit Student
+          </button>
+          <button class="cancel" onclick="closeStudentModal()">Cancel</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal for Edit Notice -->
+    <div id="notice-modal" class="modal">
+      <div class="modal-content">
+        <h3>Edit Notice</h3>
+        <label>Notice Title</label>
+        <input type="text" id="modal-notice-title" />
+        <label>Notice Content</label>
+        <textarea id="modal-notice-content"></textarea>
+        <div class="actions">
+          <button class="primary" onclick="saveNotice()">Save Changes</button>
+          <button class="cancel" onclick="closeNoticeModal()">Cancel</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Popup Notification -->
+    <div id="popup" class="popup">
+      <span id="popup-message"></span>
+      <span class="close" onclick="closePopup()">×</span>
+    </div>
+  </body>
+</html>
