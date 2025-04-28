@@ -156,83 +156,92 @@
         </div>
       </section>
 
-         <!-- CHANGE: Modified Local Storage section to display students in a table and notices in cards instead of raw JSON -->
-        <!-- Local Storage Section -->
-        <section id="local-storage" class="section">
-          <h2>Local Storage</h2>
-          <h3>Stored Students</h3>
-          <table class="storage-table">
-              <thead>
-                  <tr>
-                      <th>ID</th>
-                      <th>Name</th>
-                      <th>Class</th>
-                      <th>Roll</th>
-                  </tr>
-              </thead>
-              <tbody id="local-storage-students"></tbody>
-          </table>
-          <div class="latest-notices">
-              <h3>Stored Notices</h3>
-              <div id="local-storage-notices"></div>
-          </div>
+      <!-- CHANGE: Modified Local Storage section to display students in a table and notices in cards instead of raw JSON -->
+      <!-- Local Storage Section -->
+      <section id="local-storage" class="section">
+        <h2>Local Storage</h2>
+        <h3>Stored Students</h3>
+        <table class="storage-table">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Name</th>
+              <th>Class</th>
+              <th>Roll</th>
+            </tr>
+          </thead>
+          <tbody id="local-storage-students"></tbody>
+        </table>
+        <div class="latest-notices">
+          <h3>Stored Notices</h3>
+          <div id="local-storage-notices"></div>
+        </div>
       </section>
 
-         <!-- CHANGE: Modified Session Storage section to include tables for newly created students and notices -->
-        <!-- Session Storage Section -->
-        <section id="session-storage" class="section">
-          <h2>Session Storage</h2>
-          <div class="storage-card" id="session-storage-data">
-              <p><strong>Last Edited Student ID:</strong> <span id="session-last-student-id">None</span></p>
-              <p><strong>Last Edited Notice ID:</strong> <span id="session-last-notice-id">None</span></p>
-          </div>
-          <h3>Newly Created Students (This Session)</h3>
-          <table class="storage-table">
-              <thead>
-                  <tr>
-                      <th>ID</th>
-                      <th>Name</th>
-                      <th>Class</th>
-                      <th>Roll</th>
-                  </tr>
-              </thead>
-              <tbody id="session-new-students"></tbody>
-          </table>
-          <div class="latest-notices">
-              <h3>Newly Created Notices (This Session)</h3>
-              <div id="session-new-notices"></div>
-          </div>
+      <!-- CHANGE: Modified Session Storage section to include tables for newly created students and notices -->
+      <!-- Session Storage Section -->
+      <section id="session-storage" class="section">
+        <h2>Session Storage</h2>
+        <div class="storage-card" id="session-storage-data">
+          <p>
+            <strong>Last Edited Student ID:</strong>
+            <span id="session-last-student-id">None</span>
+          </p>
+          <p>
+            <strong>Last Edited Notice ID:</strong>
+            <span id="session-last-notice-id">None</span>
+          </p>
+        </div>
+        <h3>Newly Created Students (This Session)</h3>
+        <table class="storage-table">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Name</th>
+              <th>Class</th>
+              <th>Roll</th>
+            </tr>
+          </thead>
+          <tbody id="session-new-students"></tbody>
+        </table>
+        <div class="latest-notices">
+          <h3>Newly Created Notices (This Session)</h3>
+          <div id="session-new-notices"></div>
+        </div>
       </section>
 
       <!-- CHANGE: Modified Cookie Storage section to display session ID in a styled card instead of raw JSON -->
       <!-- Cookie Storage Section -->
       <section id="cookie-storage" class="section">
-          <h2>Cookie Storage</h2>
-          <div class="storage-card" id="cookie-storage-data">
-              <p><strong>Current Session ID:</strong> <span id="cookie-session-id">None</span></p>
-          </div>
+        <h2>Cookie Storage</h2>
+        <div class="storage-card" id="cookie-storage-data">
+          <p>
+            <strong>Current Session ID:</strong>
+            <span id="cookie-session-id">None</span>
+          </p>
+        </div>
       </section>
 
       <!-- CHANGE: Modified State Management section to display students in a table and notices in cards instead of raw JSON -->
       <!-- State Management Section -->
       <section id="state-management" class="section">
-          <h2>State Management</h2>
-          <h3>In-Memory Students</h3>
-          <table class="storage-table">
-              <thead>
-                  <tr>
-                      <th>ID</th>
-                      <th>Name</th>
-                      <th>Class</th>
-                      <th>Roll</th>
-                  </tr>
-              </thead>
-              <tbody id="state-management-students"></tbody>
-          </table>
-          <div class="latest-notices">
-              <h3>In-Memory Notices</h3>
-              <div id="state-management-notices"></div>
-          </div>
+        <h2>State Management</h2>
+        <h3>In-Memory Students</h3>
+        <table class="storage-table">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Name</th>
+              <th>Class</th>
+              <th>Roll</th>
+            </tr>
+          </thead>
+          <tbody id="state-management-students"></tbody>
+        </table>
+        <div class="latest-notices">
+          <h3>In-Memory Notices</h3>
+          <div id="state-management-notices"></div>
+        </div>
       </section>
     </main>
 
